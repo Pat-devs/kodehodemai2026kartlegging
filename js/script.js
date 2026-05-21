@@ -26,6 +26,8 @@ function incrementCount() {
     // console.log("counter is now ", counterValue)
     counterElement.textContent = counterValue
 
+    checkValue()
+
 }
 
 // setup event handler for the red button
@@ -35,4 +37,39 @@ function decrementCount() {
     counterValue = counterValue - 1;
     counterElement.textContent = counterValue
 
+    checkValue()
 }
+
+
+
+
+
+
+
+
+// reset button things
+
+// to select an element by id supply a # infront of its name
+let resetButtonElement = document.querySelector("#reset-count");
+
+resetButtonElement.addEventListener("click", resetCounter)
+
+// resets the counter, and updates the value on the page
+function resetCounter() {
+    counterValue = 0; // reset the counter
+    counterElement.textContent = counterValue; // update the page
+}
+
+
+
+// function to check if value is 10 or more
+
+function checkValue() {
+    // check if counterValue is 10 or more
+    if (counterValue > 9) {
+        alert("Congrats!!!!")
+    }
+
+
+}
+
