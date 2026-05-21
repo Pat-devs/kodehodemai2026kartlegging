@@ -1,31 +1,38 @@
-// problemstilling: hent knappen, sånt at vi kan gjøre noe med den
+// counter app
+// Vise counter verdi på nettsiden
+// ved å klikke på grønn knapp skal tallet gå opp +1
+// ved å klikke på rød knapp skal tallet gå ned -1
+
+// initialize counter with value of 0
+let counterValue = 0;
 
 
+// DOM Elements:
 
+// get the counter element:
+let counterElement = document.querySelector("#counter")
 // get the red and store it as a variable for later use
 let buttonElementRed = document.querySelector(".button-red");
-
 // get the button and store it as a variable for later use
 let buttonElementGreen = document.querySelector(".button-green");
 
-// funksjoner i javascript
-// utføre eller gjenta handlinger
+// add click events
 
-// lag en egen funsksjon:
+// setup event handler for the greem button
+buttonElementGreen.addEventListener("click", incrementCount);
 
-// basic greeting funksjon, skriver ut en melding
-function greet(message) { 
-    console.log(message)
+function incrementCount() {
+    counterValue = counterValue + 1 // increase counter value // counterValue += 5; //counterValue++;
+    // console.log("counter is now ", counterValue)
+    counterElement.textContent = counterValue
+
 }
 
-// greet("Hei")
+// setup event handler for the red button
+buttonElementRed.addEventListener("click", decrementCount);
 
-// avansert greeting funskjon
-// kan ta imot, et navn, og en hilsen tekst
+function decrementCount() {
+    counterValue = counterValue - 1;
+    counterElement.textContent = counterValue
 
-function greetAdvanced(userName, greetingText) {
-
-    console.log(greetingText, userName)
 }
-
-greetAdvanced("Patryk", "God dag") // ønsket resultat: "God dag Patryk"
