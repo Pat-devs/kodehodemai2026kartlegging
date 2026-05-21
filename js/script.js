@@ -1,15 +1,12 @@
 // problemstilling: hent knappen, sånt at vi kan gjøre noe med den
 
+// get the red and store it as a variable for later use
+let buttonElementRed = document.querySelector(".button-red");
+
 // get the button and store it as a variable for later use
-let buttonElement = document.querySelector("button");
+let buttonElementGreen = document.querySelector(".button-green");
 
 
-buttonElement.textContent = "DO NOT CLICK IT!"
 
-// buttonElement.style = "color: white; background-color: red;"
 
-// change class of an element:
-// in html we would: add proprty: class="button-red"
-
-// in JS, we can use className:
-buttonElement.className = "button-red";
+console.log(buttonElementGreen)
