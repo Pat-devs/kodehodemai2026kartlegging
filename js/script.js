@@ -16,6 +16,12 @@ let buttonElementRed = document.querySelector(".button-red");
 // get the button and store it as a variable for later use
 let buttonElementGreen = document.querySelector(".button-green");
 
+// Media elements: <audio src="media/cymbal.ogg"></audio>
+let audioElement = document.querySelector("audio")
+
+
+
+
 // add click events
 
 // setup event handler for the greem button
@@ -42,7 +48,14 @@ function decrementCount() {
 
 
 
+// red button hover event
+buttonElementRed.addEventListener("pointerenter", annoyUser)
 
+
+function annoyUser() {
+     audioElement.play()
+    alert("lol!!!!")
+}
 
 
 
@@ -67,6 +80,7 @@ function resetCounter() {
 function checkValue() {
     // check if counterValue is 10 or more
     if (counterValue > 9) {
+        audioElement.play()
         alert("Congrats!!!!")
     }
 
